@@ -6,7 +6,7 @@
 
 body {
     font-family: "Open Sans";
-    background-color: ghostghostwhite;
+    background-color: ghostwhite;
 }
 
 [class*="col-"] {
@@ -31,7 +31,7 @@ body {
     font-size: 13px;
     background-color: #0064B0;
     border: 0;
-    height: 60px;
+    height: 9.1vh;
 }
 
 .navbar-inverse .navbar-brand {
@@ -76,6 +76,7 @@ body {
     margin: auto;
     width: 100%;
     max-height: 450px;
+    background-attachment: fixed;
     filter: brightness(75%);
     object-fit: cover;
 }
@@ -327,10 +328,35 @@ button.close {
 
 ==========================================*/
 
-.carousel-caption h3 {
-    font-size: 4em;
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        background-image: url(../../images/bateau.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 90.9vh;
+    width: 100%;
+
+}
+
+.header h3 {
+    font-size: 3em;
+    color: ghostwhite;
+    margin-top: 30px;
     font-weight: 600;
     text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.header img {
+    width: 20%;
+}
+
+.header p {
+    font-size: 1.8em;
+    color: ghostwhite;
 }
 
 .well {
@@ -338,7 +364,7 @@ button.close {
     margin: 0 auto;
     margin-top: 75px;
     margin-bottom: 75px;
-    background-color: ghostwhite;
+    background-color: #0064B0;
     height: 450px;
     padding: 0px;
     border: 0;
@@ -352,7 +378,7 @@ button.close {
 }
 
 .presentation {
-    color: #222;
+    color: ghostwhite;
     font-size: 20px;
     font-weight: 600;
     text-transform: capitalize;
@@ -363,8 +389,8 @@ button.close {
 }
 
 .traitsimple {
-    background-color: #222;
-    height: 2px;
+    background-color: ghostwhite;
+    height: 1px;
     width: 80%;
     margin: 0 auto;
 }
@@ -376,7 +402,7 @@ button.close {
 }
 
 .textpres {
-    color: #222;
+    color: ghostwhite;
     text-align: left;
     width: 80%;
     margin: 0 auto;
@@ -414,7 +440,6 @@ button.close {
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
     float: left;
     margin: 1.6%;
-    
     background-image: url(../../images/wov.png);
 }
 
