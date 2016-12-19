@@ -7,6 +7,7 @@
 body {
     font-family: "Open Sans";
     background-color: ghostwhite;
+    background-image: url(../../images/wov.png);
 }
 
 [class*="col-"] {
@@ -44,7 +45,7 @@ body {
 
 .navbar button {
     background-color: orangered;
-    height: 60px;
+    height: 9.9vh;
     border: 0px;
     color: ghostwhite;
     text-transform: capitalize;
@@ -416,10 +417,13 @@ button.close {
 
 .annonce {
     width: 100%;
+    /*
     background-image: url(../../images/wov.png);
+*/
     padding-top: 75px;
     padding-bottom: 100px;
     height: 1210px;
+    background-color: ghostwhite;
 }
 
 .section-annonce {
@@ -428,11 +432,61 @@ button.close {
 }
 
 .petite-annonce {
+    color: ghostwhite;
     float: left;
     margin: 1.5%;
     width: 30%;
-    height: 450px;
-    background-color: #333;
+    height: 438px;
+    background-color: ghostwhite;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+}
+
+.petite-annonce img {
+    height: 225px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.present-annonce {
+    width: 80%;
+    max-width: 80%;
+    height: 10%;
+    background-color: #0064b0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.present-annonce-description {
+    width: 80%;
+    max-width: 80%;
+    height: 25%;
+    background-color: #0064b0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.present-annonce p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 15%;
+    background-color: yellowgreen;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.present-annonce h5 {
+    margin: 0px;
+    font-weight: 600;
+}
+
+.present-annonce div {
+    width: 85%;
 }
 
 .equipe {
@@ -471,7 +525,7 @@ PAGE SERVICE ET BESOINS
 .recherche {
     width: 87%;
     height: 70px;
-    background-color: #FFD700;
+    background-color: orangered;
     margin-top: 20px;
 }
 
@@ -580,13 +634,56 @@ hr {
 }
 
 
-
 /*====================================
 FOOTER
 =====================================*/
 
 footer {
-    height: 450px;
+    /*
+    height: 300px;*/
     width: 100%;
     background-color: #0064b0;
+    display: flex;
+    justify-content: center;
+    color: ghostwhite;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+footer h4 {
+    font-weight: 600;
+}
+
+footer a {
+    text-decoration: none;
+    cursor: pointer;
+    color: ghostwhite;
+}
+
+footer a:hover {
+    color: orangered;
+    text-decoration: none;
+}
+
+footer p {
+    text-decoration: none;
+    cursor: pointer;
+    color: ghostwhite;
+    margin-bottom: 0px;
+}
+
+footer div {
+    margin-left: 75px;
+    margin-right: 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer button {
+    width: 200px;
+    height: 50px;
+    background-color: orangered;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 600;
 }
