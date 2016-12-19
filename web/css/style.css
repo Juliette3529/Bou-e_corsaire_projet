@@ -31,7 +31,7 @@ body {
     font-size: 13px;
     background-color: #0064B0;
     border: 0;
-    height: 9.1vh;
+    height: 9.9vh;
 }
 
 .navbar-inverse .navbar-brand {
@@ -70,26 +70,6 @@ body {
     color: ghostwhite;
     margin-top: 5px;
     text-transform: capitalize;
-}
-
-.carousel-inner img {
-    margin: auto;
-    width: 100%;
-    max-height: 450px;
-    background-attachment: fixed;
-    filter: brightness(75%);
-    object-fit: cover;
-}
-
-.carousel-caption img {
-    filter: brightness(100%);
-    width: 220px;
-}
-
-.carousel-inner p {
-    font-size: 17px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 
@@ -333,12 +313,11 @@ button.close {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-        background-image: url(../../images/bateau.jpg);
+    background-image: url(../../images/bateau.jpg);
     background-size: cover;
     background-attachment: fixed;
-    height: 90.9vh;
+    height: 90.1vh;
     width: 100%;
-
 }
 
 .header h3 {
@@ -362,8 +341,8 @@ button.close {
 .well {
     width: 90%;
     margin: 0 auto;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     background-color: #0064B0;
     height: 450px;
     padding: 0px;
@@ -410,7 +389,7 @@ button.close {
 }
 
 .intro h3 {
-     color: #222;
+    color: #0064b0;
     font-size: 20px;
     font-weight: 600;
     text-transform: capitalize;
@@ -421,7 +400,7 @@ button.close {
 }
 
 .intro p {
-    color: #222;
+    color: #0064b0;
     text-align: left;
     width: 90%;
     margin: 0 auto;
@@ -435,54 +414,48 @@ button.close {
     margin: 20px auto;
 }
 
-.cadre {
-    width: 30%;
-    box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
-    float: left;
-    margin: 1.6%;
+.annonce {
+    width: 100%;
     background-image: url(../../images/wov.png);
+    padding-top: 75px;
+    padding-bottom: 100px;
+    height: 1210px;
 }
 
-
-.service {
-    margin: 15px;
-    height: 80px;
-    background-color: black;
+.section-annonce {
+    width: 93%;
+    margin: 0 auto;
 }
 
-.categorie {
-    margin: 15px;
-    height: 140px;
-    background-color: black;
-}
-
-.heure {
-    background-color: limegreen;
-    width: 30px;
-    height: 37px;
-    margin: 15px;
-    color: ghostwhite;
-    font-size: 12px;
-}
-
-.nbheure {
-    padding: 10px;
-    color: ghostwhite;
-    font-size: 12px;
-}
-
-.info,
-.identite {
-    color: ghostwhite;
-    font-size: 12px;
-}
-
-.icone img {
-    height: 37px;
-    width: 30px;
+.petite-annonce {
     float: left;
-    background-color: limegreen;
-    margin: 15px;
+    margin: 1.5%;
+    width: 30%;
+    height: 450px;
+    background-color: #333;
+}
+
+.equipe {
+    background-image: url(../../images/mer.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.equipe img {
+    height: 65%;
+    border-radius: 100%;
+}
+
+.equipe p {
+    width: 50%;
+    margin-left: 20px;
+    color: ghostwhite;
+    font-weight: 600;
 }
 
 
@@ -604,4 +577,16 @@ hr {
 .btnsub {
     margin-top: 15px;
     width: 150px;
+}
+
+
+
+/*====================================
+FOOTER
+=====================================*/
+
+footer {
+    height: 450px;
+    width: 100%;
+    background-color: #0064b0;
 }
