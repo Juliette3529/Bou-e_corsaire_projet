@@ -340,7 +340,7 @@ button.close {
 }
 
 .well {
-    width: 90%;
+    width: 78%;
     margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -395,7 +395,7 @@ button.close {
     font-weight: 600;
     text-transform: capitalize;
     text-align: left;
-    width: 90%;
+    width: 77.5%;
     margin: 0px auto;
     padding-bottom: 5px;
 }
@@ -403,7 +403,7 @@ button.close {
 .intro p {
     color: #0064b0;
     text-align: left;
-    width: 90%;
+    width: 77.5%;
     margin: 0 auto;
     padding-bottom: 25px;
 }
@@ -427,8 +427,9 @@ button.close {
 }
 
 .section-annonce {
-    width: 93%;
+    width: 80%;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 .petite-annonce {
@@ -439,6 +440,7 @@ button.close {
     height: 438px;
     background-color: ghostwhite;
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .petite-annonce img {
