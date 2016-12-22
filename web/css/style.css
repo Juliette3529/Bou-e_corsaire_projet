@@ -328,6 +328,8 @@ button.close {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0px;
+    text-shadow: 1px 2px 3px #666;
+
 }
 
 .header img {
@@ -337,6 +339,8 @@ button.close {
 .header p {
     font-size: 1.8em;
     color: ghostwhite;
+    text-shadow: 1px 2px 3px #666;
+
 }
 
 .well {
@@ -519,16 +523,80 @@ button.close {
 PAGE SERVICE ET BESOINS
 =======================================*/
 
-.bloc {
-    width: 93%;
-    margin: 0 auto;
+.header-service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../images/bateau.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
 }
 
+.header-service h3 {
+    font-size: 3em;
+    color: ghostwhite;
+    margin-top: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    text-shadow: 1px 2px 3px #666;
+}
+
+.header-service p {
+    font-size: 1.8em;
+    color: ghostwhite;
+    text-shadow: 1px 2px 3px #666;
+    text-transform:  uppercase;
+}
+
+
 .recherche {
-    width: 87%;
-    height: 70px;
+    width: 78%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
     background-color: orangered;
-    margin-top: 20px;
+    height: 100px;
+    padding: 0px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+}
+
+.recherche input, .recherche select, .recherche button {
+    height: 10vh;
+    margin: 10px;
+    width:  35vh;
+    padding:  2vh;
+    text-align: center;
+    background-color: ghostwhite;
+    border: 0;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    color: #333;
+    outline: none;
+}
+
+.recherche button {
+    height: 10vh;
+    margin: 10px;
+    width:  35vh;
+    padding:  2vh;
+    text-align: center;
+    color: ghostwhite;
+    background-color: orangered;
+    text-transform:  uppercase;
+    font-size: 0.95em;
+    border: 1px solid ghostwhite;
+}
+
+.recherche button:hover {
+    background-color: #0064b0;
 }
 
 
@@ -641,15 +709,15 @@ FOOTER
 =====================================*/
 
 footer {
-    /*
-    height: 300px;*/
     width: 100%;
     background-color: #0064b0;
     display: flex;
     justify-content: center;
     color: ghostwhite;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 12%;
+    padding-right: 12%;
 }
 
 footer h4 {
@@ -675,10 +743,13 @@ footer p {
 }
 
 footer div {
-    margin-left: 75px;
-    margin-right: 75px;
+    background-color: #0064B0;
+    padding: 0px;
+    border: 0;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    width: 50%;
 }
 
 footer button {
