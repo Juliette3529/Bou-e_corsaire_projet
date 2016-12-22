@@ -180,56 +180,51 @@
     
     <section class="recherche">
         <form action="">
-            <input type="text" placeholder="Recherche par mots clefs" maxlength="40">
+            <input type="text" placeholder="Recherche par mots clefs" maxlength="50">
             <select name="" id="">
-                <option value="">ffff</option>
-                <option value="">Sélectionner</option>
-                <option value="">Sélectionner</option>
-                <option value="">Sélectionner</option>
-                <option value="">Sélectionner</option>
+               {% for service in services|sort %}
+
+                <option value="">{{ service.categorie }}</option>
+                {% endfor %}
             </select>
             <input type="text" placeholder="Code Postal" maxlength="5">
             <button type="submit">Rechercher</button>
         </form>
     </section>
-   
-    <h1>Service</h1>
-{% for service in services %}
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ service.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ service.title }}</td>
-            </tr>
-            <tr>
-                <th>Level</th>
-                <td>{{ service.level }}</td>
-            </tr>
-            <tr>
-                <th>Categorie</th>
-                <td>{{ service.categorie }}</td>
-            </tr>
-            <tr>
-                <th>Statut</th>
-                <td>{% if service.statut %}Yes{% else %}No{% endif %}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('service_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('service_edit', { 'id': service.id }) }}">Edit</a>
-        </li>
-    </ul>
-    {% endfor %}
     
+<section class="annonce-service">    
+{% for service in services %}
+<div class="section-annonce">
+        <div class="petite-annonce">
+            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
+            <div class="present-annonce">
+                <p>2H</p>
+                <div>
+                    <h5>{{ service.title }}</h5>
+                    <small>{{ service.categorie }}</small>
+                </div>
+            </div>
+            <div class="present-annonce present-annonce-description">
+                <p>2H</p>
+                <div>
+                    <h5>{{ service.id }} - 49000</h5>
+                    <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint harum dolores nihil tempora</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+<ul class="breadcrumb">    
+    <li><a href="#" class="active">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>    
+    <li><a href="#">4</a></li>    
+    <li><a href="#">5</a></li>    
+    <li><a href="#">6</a></li>       
+</ul>
+  
+
     <!-- FOOTER -->
 <footer>
     <div>
@@ -237,7 +232,11 @@
         <a href="{{ path('homepage') }}">Accueil</a>
         <a href="{{ path('service_index') }}">Services</a>
         <a href="{{ path('besoin_index') }}">Besoins</a>
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
         <a href="">Mon profil</a>
+		{% endif %}
+       
+        
     </div>
     <div>
         <h4>Social</h4>
