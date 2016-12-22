@@ -167,36 +167,28 @@
 		</div>
 	</nav>
 
-   
-   <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
+<!--HEADER AVEC IMAGE PARALLAX -->
+<div>
+    <div class="header">
+        <img src="{{ app.request.basepath }}/images/logo_v2_1024.jpg" alt="">
+        <h3>LA BOUéE CORSAIRE</h3>
+        <p>LE SITE DE L'ÉCHANGE GRATUIT</p>
+    </div>
+</div>
 
-
-    <!-- Wrapper for slides -->
-    <div>
-        <div class="header">
-                <img src="{{ app.request.basepath }}/images/logo_v2_1024.jpg" alt="">
-                <h3>LA BOUéE CORSAIRE</h3>
-                <p>LE SITE DE L'ÉCHANGE GRATUIT</p>
+<!-- SECTION DE PRESENTATION AVEC LOGO PLUS TEXTE DESCRIPTIF -->
+<div>
+    <div class="well">
+        <img class="imgpres" src="{{ app.request.basepath }}/images/logo_v2_10242.jpeg">
+        <div class="text-presentation">
+            <p class="presentation">Troc & Co</p>
+            <div class="traitsimple"></div>
+            <p class="textpres">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in turpis in purus consequat imperdiet sed non ante. Curabitur dictum leo quis auctor facilisis. Curabitur viverra arcu sed nibh bibendum, malesuada commodo leo auctor. Vivamus in neque eu metus interdum ultrices. Aliquam auctor lorem a commodo fermentum. Praesent eu sapien bibendum, interdum neque ac, posuere mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque ut varius diam. Proin eget nulla et ipsum condimentum sodales Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas distinctio iusto temporibus a, impedit amet ratione nemo aspernatur, nulla veritatis illo blanditiis rem optio pariatur alias, asperiores error voluptatem sapiente.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
     </div>
 </div>
 
-
-
-
-    <div>
-        <!--<div class="col-sm-12">-->
-        <div class="well">
-            <img class="imgpres" src="{{ app.request.basepath }}/images/logo_v2_10242.jpeg">
-            <div class="text-presentation">
-                <p class="presentation">Troc & Co</p>
-                <div class="traitsimple"></div>
-                <p class="textpres">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in turpis in purus consequat imperdiet sed non ante. Curabitur dictum leo quis auctor facilisis. Curabitur viverra arcu sed nibh bibendum, malesuada commodo leo auctor. Vivamus in neque eu metus interdum ultrices. Aliquam auctor lorem a commodo fermentum. Praesent eu sapien bibendum, interdum neque ac, posuere mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque ut varius diam. Proin eget nulla et ipsum condimentum sodales Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas distinctio iusto temporibus a, impedit amet ratione nemo aspernatur, nulla veritatis illo blanditiis rem optio pariatur alias, asperiores error voluptatem sapiente.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-        </div>
-    </div>
-
+<!-- SECTION DES ANNONCES -->
 <section class="annonce">
     <div class="intro">
         <h3>Troc & Co.</h3>
@@ -204,162 +196,150 @@
     </div>
     <div class="section-annonce">
         <div class="petite-annonce">
-          <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-           <div class="present-annonce">
-               <p>2H</p>
-               <div>
-               <h5>Réparation Automobile</h5>
-               <small>Catégorie voiture</small>
-               </div>
-           </div>
-              
-                <div class="present-annonce present-annonce-description">
-               <p>2H</p>
-               <div>
-               <h5>Emilie Dupont - 49000</h5>
-               <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-               </div>
-         </div>
+            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
+            <div class="present-annonce">
+                <p>2H</p>
+                <div>
+                    <h5>{{ besoin.title }}</h5>
+                    <small>{{ besoin.categorie }}</small>
+                </div>
+            </div>
+            <div class="present-annonce present-annonce-description">
+                <p>2H</p>
+                <div>
+                    <h5>Emilie Dupont - 49000</h5>
+                    <small>{{ besoin.description }}</small>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-       
     <div class="section-annonce">
         <div class="petite-annonce">
-          <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-           <div class="present-annonce">
-               <p>2H</p>
-               <div>
-               <h5>Réparation Automobile</h5>
-               <small>Catégorie voiture</small>
-               </div>
-           </div>
-              
-                <div class="present-annonce present-annonce-description">
-               <p>2H</p>
-               <div>
-               <h5>Emilie Dupont - 49000</h5>
-               <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-               </div>
-         </div>
+            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
+            <div class="present-annonce">
+                <p>2H</p>
+                <div>
+                    <h5>Réparation Automobile</h5>
+                    <small>Catégorie voiture</small>
+                </div>
+            </div>
+            <div class="present-annonce present-annonce-description">
+                <p>2H</p>
+                <div>
+                    <h5>Emilie Dupont - 49000</h5>
+                    <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    
     <div class="section-annonce">
         <div class="petite-annonce">
-          <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-           <div class="present-annonce">
-               <p>2H</p>
-               <div>
-               <h5>Réparation Automobile</h5>
-               <small>Catégorie voiture</small>
-               </div>
-           </div>
-              
-                <div class="present-annonce present-annonce-description">
-               <p>2H</p>
-               <div>
-               <h5>Emilie Dupont - 49000</h5>
-               <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-               </div>
-         </div>
+            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
+            <div class="present-annonce">
+                <p>2H</p>
+                <div>
+                    <h5>Réparation Automobile</h5>
+                    <small>Catégorie voiture</small>
+                </div>
+            </div>
+            <div class="present-annonce present-annonce-description">
+                <p>2H</p>
+                <div>
+                    <h5>Emilie Dupont - 49000</h5>
+                    <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    
-    
     <div class="section-annonce">
         <div class="petite-annonce">
-          <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-           <div class="present-annonce">
-               <p>2H</p>
-               <div>
-               <h5>Réparation Automobile</h5>
-               <small>Catégorie voiture</small>
-               </div>
-           </div>
-              
-                <div class="present-annonce present-annonce-description">
-               <p>2H</p>
-               <div>
-               <h5>Emilie Dupont - 49000</h5>
-               <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-               </div>
-         </div>
+            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
+            <div class="present-annonce">
+                <p>2H</p>
+                <div>
+                    <h5>Réparation Automobile</h5>
+                    <small>Catégorie voiture</small>
+                </div>
+            </div>
+            <div class="present-annonce present-annonce-description">
+                <p>2H</p>
+                <div>
+                    <h5>Emilie Dupont - 49000</h5>
+                    <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    
-    
-    
     <div class="section-annonce">
         <div class="petite-annonce">
-          <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-           <div class="present-annonce">
-               <p>2H</p>
-               <div>
-               <h5>Réparation Automobile</h5>
-               <small>Catégorie voiture</small>
-               </div>
-           </div>
-              
-                <div class="present-annonce present-annonce-description">
-               <p>2H</p>
-               <div>
-               <h5>Emilie Dupont - 49000</h5>
-               <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-               </div>
-         </div>
+            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
+            <div class="present-annonce">
+                <p>2H</p>
+                <div>
+                    <h5>Réparation Automobile</h5>
+                    <small>Catégorie voiture</small>
+                </div>
+            </div>
+            <div class="present-annonce present-annonce-description">
+                <p>2H</p>
+                <div>
+                    <h5>Emilie Dupont - 49000</h5>
+                    <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    
     <div class="section-annonce">
         <div class="petite-annonce">
-          <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-           <div class="present-annonce">
-               <p>2H</p>
-               <div>
-               <h5>Réparation Automobile</h5>
-               <small>Catégorie voiture</small>
-               </div>
-           </div>
-              
-                <div class="present-annonce present-annonce-description">
-               <p>2H</p>
-               <div>
-               <h5>Emilie Dupont - 49000</h5>
-               <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-               </div>
-         </div>
-    </div>
+            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
+            <div class="present-annonce">
+                <p>2H</p>
+                <div>
+                    <h5>Réparation Automobile</h5>
+                    <small>Catégorie voiture</small>
+                </div>
+            </div>
+            <div class="present-annonce present-annonce-description">
+                <p>2H</p>
+                <div>
+                    <h5>Emilie Dupont - 49000</h5>
+                    <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+<!-- SECTION PRESENTATION DU GERANT -->
 <section class="equipe">
     <img src="{{ app.request.basepath }}/images/pirate.jpg" alt="">
     <p>Un texte de l'administrateur de l'application. Consectetur adipisicing elit. Assumenda eveniet, officia reprehenderit consectetur quibusdam quasi ex? Incidunt inventore ducimus fugiat error odio, adipisci sint, quod ea. Repellendus quod facilis, vel.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ducimus a quos deserunt, ratione dolores id necessitatibus provident ea minima earum blanditiis rerum illo aliquam distinctio non consequuntur qui ipsam?</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-	<div>
-	    <h4>Lorem</h4>
-	    <a href="">Accueil</a>
-	    <a href="">Services</a>
-	    <a href="">Besoins</a>
-	    <a href="">Mon profil</a>
-	</div>
-	<div>
-     <h4>Social</h4>
-	    <p>Facebook</p>
-	    <p>Twitter</p>
-	    <p>Google+</p>	    
-	</div>
-	<div>
-    <h4>Contact</h4>
-	    <p>adresse1@contact.com</p>
-	    <p>adresse2@contact.com</p>
-	    <p>Adress - Siège de l'association</p>
-	</div>
-	<div>
-	    <button>M'inscrire</button>
-	</div>
+    <div>
+        <h4>Lorem</h4>
+        <a href="">Accueil</a>
+        <a href="">Services</a>
+        <a href="">Besoins</a>
+        <a href="">Mon profil</a>
+    </div>
+    <div>
+        <h4>Social</h4>
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>Google+</p>
+    </div>
+    <div>
+        <h4>Contact</h4>
+        <p>adresse1@contact.com</p>
+        <p>adresse2@contact.com</p>
+        <p>Adress - Siège de l'association</p>
+    </div>
+    <div>
+        <button>M'inscrire</button>
+    </div>
 </footer>
 
 

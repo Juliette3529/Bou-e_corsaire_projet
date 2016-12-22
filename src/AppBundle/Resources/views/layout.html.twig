@@ -1,6 +1,5 @@
 
 <html>
-
 <head>
 	<meta charset="UTF-8" />
 	<title>{% block title %}Welcome!{% endblock %}</title>
@@ -54,7 +53,7 @@
 		</div>
 	</div>
 
-<nav class="navbar navbar-inverse">
+ <nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -66,9 +65,10 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
 					<li><a href="{{ path('servicepage') }}">Services</a></li>
 					<li><a href="{{ path('besoinpage') }}">Besoins</a></li>
+					{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 					<li><a href="{{ path('fos_user_profile_show') }}">Mon profil</a></li>
 					<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -91,14 +91,30 @@
 	
 	{% block body %}{% endblock %} {% block javascripts %}{% endblock %}
 	
-	<footer>
-		<i class="fa fa-facebook-square fa-3x" aria-hidden="true" ></i>
-		<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
-		<i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
-	</footer>
-
-
-
+<!-- FOOTER -->
+<footer>
+    <div>
+        <h4>Lorem</h4>
+        <a href="">Accueil</a>
+        <a href="">Services</a>
+        <a href="">Besoins</a>
+        <a href="">Mon profil</a>
+    </div>
+    <div>
+        <h4>Social</h4>
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>Google+</p>
+    </div>
+    <div>
+        <h4>Contact</h4>
+        <p>adresse1@contact.com</p>
+        <p>adresse2@contact.com</p>
+        <p>Adress - Siège de l'association</p>
+    </div>
+    <div>
+        <button>M'inscrire</button>
+    </div>
+</footer>
 </body>
-
 </html>
