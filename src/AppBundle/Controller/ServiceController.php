@@ -26,7 +26,7 @@ class ServiceController extends Controller
 
         $services = $em->getRepository('AppBundle:Service')->findAll();
 
-        return $this->render('service/index.html.twig', array(
+        return $this->render('service/show.html.twig', array(
             'services' => $services,
         ));
     }
