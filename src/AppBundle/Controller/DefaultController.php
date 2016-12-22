@@ -16,14 +16,14 @@ class DefaultController extends Controller
     {
         
         $em = $this->getDoctrine()->getManager();
-
-        $besoin = $em->getRepository('AppBundle:Besoin')->findBy(['id' => 1]);
-        $besoin = $besoin[0];
+        $services = $em->getRepository('AppBundle:Service')->findAll();
+        $besoins = $em->getRepository('AppBundle:Besoin')->findAll();
         
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-            'besoin' => $besoin,
+            'services' => $services,
+            'besoins' => $besoins,
         ]);
     }
 	

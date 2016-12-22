@@ -145,8 +145,8 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 
-					<li><a href="{{ path('servicepage') }}">Services</a></li>
-					<li><a href="{{ path('besoinpage') }}">Besoins</a></li>
+					<li><a href="{{ path('service_index') }}">Services</a></li>
+					<li><a href="{{ path('besoin_index') }}">Besoins</a></li>
 					{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 					<li><a href="{{ path('fos_user_profile_show') }}">Mon profil</a></li>
 					<li class="dropdown">
@@ -194,6 +194,8 @@
         <h3>Troc & Co.</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu sapien bibendum, interdum neque ac, posuere mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque ut varius diam. </p>
     </div>
+    
+    {% for besoin in besoins|slice(0, 6) %}
     <div class="section-annonce">
         <div class="petite-annonce">
             <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
@@ -207,107 +209,13 @@
             <div class="present-annonce present-annonce-description">
                 <p>2H</p>
                 <div>
-                    <h5>Emilie Dupont - 49000</h5>
+                    <h5>{{ besoin.id }} - 49000</h5>
                     <small>{{ besoin.description }}</small>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section-annonce">
-        <div class="petite-annonce">
-            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-            <div class="present-annonce">
-                <p>2H</p>
-                <div>
-                    <h5>Réparation Automobile</h5>
-                    <small>Catégorie voiture</small>
-                </div>
-            </div>
-            <div class="present-annonce present-annonce-description">
-                <p>2H</p>
-                <div>
-                    <h5>Emilie Dupont - 49000</h5>
-                    <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-annonce">
-        <div class="petite-annonce">
-            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-            <div class="present-annonce">
-                <p>2H</p>
-                <div>
-                    <h5>Réparation Automobile</h5>
-                    <small>Catégorie voiture</small>
-                </div>
-            </div>
-            <div class="present-annonce present-annonce-description">
-                <p>2H</p>
-                <div>
-                    <h5>Emilie Dupont - 49000</h5>
-                    <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-annonce">
-        <div class="petite-annonce">
-            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-            <div class="present-annonce">
-                <p>2H</p>
-                <div>
-                    <h5>Réparation Automobile</h5>
-                    <small>Catégorie voiture</small>
-                </div>
-            </div>
-            <div class="present-annonce present-annonce-description">
-                <p>2H</p>
-                <div>
-                    <h5>Emilie Dupont - 49000</h5>
-                    <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-annonce">
-        <div class="petite-annonce">
-            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-            <div class="present-annonce">
-                <p>2H</p>
-                <div>
-                    <h5>Réparation Automobile</h5>
-                    <small>Catégorie voiture</small>
-                </div>
-            </div>
-            <div class="present-annonce present-annonce-description">
-                <p>2H</p>
-                <div>
-                    <h5>Emilie Dupont - 49000</h5>
-                    <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-annonce">
-        <div class="petite-annonce">
-            <img src="{{ app.request.basepath }}/images/voiture.jpg" alt="">
-            <div class="present-annonce">
-                <p>2H</p>
-                <div>
-                    <h5>Réparation Automobile</h5>
-                    <small>Catégorie voiture</small>
-                </div>
-            </div>
-            <div class="present-annonce present-annonce-description">
-                <p>2H</p>
-                <div>
-                    <h5>Emilie Dupont - 49000</h5>
-                    <small>Lorem ips consectetur adipisicing elit. Quos sit nesciunt Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </section>
 
 <!-- SECTION PRESENTATION DU GERANT -->
@@ -315,30 +223,29 @@
     <img src="{{ app.request.basepath }}/images/pirate.jpg" alt="">
     <p>Un texte de l'administrateur de l'application. Consectetur adipisicing elit. Assumenda eveniet, officia reprehenderit consectetur quibusdam quasi ex? Incidunt inventore ducimus fugiat error odio, adipisci sint, quod ea. Repellendus quod facilis, vel.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ducimus a quos deserunt, ratione dolores id necessitatibus provident ea minima earum blanditiis rerum illo aliquam distinctio non consequuntur qui ipsam?</p>
 </section>
-
 <!-- FOOTER -->
 <footer>
     <div>
         <h4>Lorem</h4>
-        <a href="">Accueil</a>
-        <a href="">Services</a>
-        <a href="">Besoins</a>
+        <a href="{{ path('homepage') }}">Accueil</a>
+        <a href="{{ path('service_index') }}">Services</a>
+        <a href="{{ path('besoin_index') }}">Besoins</a>
         <a href="">Mon profil</a>
     </div>
     <div>
         <h4>Social</h4>
-        <p>Facebook</p>
-        <p>Twitter</p>
-        <p>Google+</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Google+</a>
     </div>
     <div>
         <h4>Contact</h4>
-        <p>adresse1@contact.com</p>
-        <p>adresse2@contact.com</p>
+        <a href="HREF="mailto:adresse1@contact.com"">adresse1@contact.com</a>
+        <a href="HREF="mailto:adresse2@contact.com"">adresse2@contact.com</a>
         <p>Adress - Siège de l'association</p>
     </div>
     <div>
-        <button>M'inscrire</button>
+        <button data-toggle="modal" data-target="#myModal">M'inscrire</button>
     </div>
 </footer>
 

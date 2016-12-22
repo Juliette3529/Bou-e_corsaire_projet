@@ -3,6 +3,7 @@
 {% block body %}
     <h1>Besoin</h1>
 
+   {% for service in services %}
     <table>
         <tbody>
             <tr>
@@ -39,10 +40,6 @@
         <li>
             <a href="{{ path('besoin_edit', { 'id': besoin.id }) }}">Edit</a>
         </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
     </ul>
+{% endfor %}
 {% endblock %}
