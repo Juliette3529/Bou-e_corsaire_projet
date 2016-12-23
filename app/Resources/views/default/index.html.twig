@@ -222,16 +222,17 @@
     <img src="{{ app.request.basepath }}/images/pirate.jpg" alt="">
     <p>Un texte de l'administrateur de l'application. Consectetur adipisicing elit. Assumenda eveniet, officia reprehenderit consectetur quibusdam quasi ex? Incidunt inventore ducimus fugiat error odio, adipisci sint, quod ea. Repellendus quod facilis, vel.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ducimus a quos deserunt, ratione dolores id necessitatibus provident ea minima earum blanditiis rerum illo aliquam distinctio non consequuntur qui ipsam?</p>
 </section>
+
 <!-- FOOTER -->
 <footer>
     <div>
         <h4>Lorem</h4>
         <a href="{{ path('homepage') }}">Accueil</a>
         <a href="{{ path('service_index') }}">Services</a>
-        <a href="{{ path('besoin_index') }}">Besoins</a>
-        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        <a href="">Mon profil</a>
-		{% endif %}
+        <a href="{{ path('besoin_index') }}">Besoins</a> {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <a href="">Mon profil</a> {% endif %}
+
+
     </div>
     <div>
         <h4>Social</h4>
@@ -241,15 +242,14 @@
     </div>
     <div>
         <h4>Contact</h4>
-        <a href="HREF="mailto:adresse1@contact.com"">adresse1@contact.com</a>
-        <a href="HREF="mailto:adresse2@contact.com"">adresse2@contact.com</a>
+        <a href="HREF=" mailto:adresse1@contact.com "">adresse1@contact.com</a>
+        <a href="HREF=" mailto:adresse2@contact.com "">adresse2@contact.com</a>
         <p>Adress - Siège de l'association</p>
     </div>
     <div>
-        <button data-toggle="modal" data-target="#myModal">M'inscrire</button>
+        <button data-toggle="modal" data-target="#myModal">&rarr; M'inscrire</button>
     </div>
 </footer>
-
 
 
 </body>

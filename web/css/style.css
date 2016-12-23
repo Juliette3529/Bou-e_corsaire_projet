@@ -30,9 +30,11 @@ body {
     margin-bottom: 0;
     border-radius: 0;
     font-size: 1.1em;
-    background-color: #0064B0;
+    background-color: rgba(0, 100, 176, 0.8);
     border: 0;
     height: 9.9vh;
+    box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.5);
+    z-index: 999;
 }
 
 .navbar-inverse .navbar-brand {
@@ -41,6 +43,12 @@ body {
     margin-top: 5px;
     font-size: 1.4em;
     text-transform: uppercase;
+    z-index: 999;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: lightblue;
+    transition: 0.5s;
 }
 
 .navbar button {
@@ -51,6 +59,10 @@ body {
     text-transform: capitalize;
     outline: inherit;
     padding: 0px 15px 0px 15px;
+}
+
+.navbar button:hover {
+    background-color: coral;
 }
 
 .navbar-nav {
@@ -71,6 +83,11 @@ body {
     color: ghostwhite;
     margin-top: 5px;
     text-transform: capitalize;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {    
+    color: lightblue;
+    transition: 0.5s;
 }
 
 
@@ -458,22 +475,22 @@ button.close {
     width: 80%;
     max-width: 80%;
     height: 10%;
-    background-color: #0064b0;
     margin: 0 auto;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    background-color: rgba(0, 100, 176, 0.8);
 }
 
 .present-annonce-description {
     width: 80%;
     max-width: 80%;
     height: 25%;
-    background-color: #0064b0;
     margin: 0 auto;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    background-color: rgba(0, 100, 176, 0.8);
 }
 
 .present-annonce p {
@@ -731,7 +748,7 @@ FOOTER
 
 footer {
     width: 100%;
-    background-color: #0064b0;
+    background-color: rgba(0, 100, 177, 0.8);
     display: flex;
     justify-content: center;
     color: ghostwhite;
@@ -764,7 +781,6 @@ footer p {
 }
 
 footer div {
-    background-color: #0064B0;
     padding: 0px;
     border: 0;
     display: flex;
@@ -780,4 +796,8 @@ footer button {
     border: 0;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+footer button:hover {
+    background-color: coral;
 }
